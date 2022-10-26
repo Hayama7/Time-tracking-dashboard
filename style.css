@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+:root{
+    --Blue: hsl(246, 80%, 60%);
+
+    --Light_red_w : hsl(15, 100%, 70%); /*work*/
+    --Soft_blue : hsl(195, 74%, 62%);  /*play */
+    --Light_red : hsl(348, 100%, 68%); /*study*/
+    --Lime_green : hsl(145, 58%, 55%);  /*exercise*/
+    --Violet : hsl(264, 64%, 52%); /*social*/
+    --Soft_orange : hsl(43, 84%, 65%); /*self care*/
+
+    --Very_dark_blue: hsl(226, 43%, 10%);
+    --Dark_blue: hsl(235, 46%, 20%);
+    --Desaturated_blue: hsl(235, 45%, 61%);
+    --Pale_Blue: hsl(236, 100%, 87%);
+
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh; 
+    background-color: var(--Very_dark_blue);
+    padding: 30px;
+    font-family: 'Rubik', sans-serif;
+}
+.container{
+    display:block;
+}
+
+
+
+.person_card{
+    width: 100%;
+    height: fit-content;
+    background-color: var(--Dark_blue);
+    display: flex;
+    flex-direction: column;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.profile{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+    padding: 25px;
+    background-color: var(--Blue);
+    border-radius: 20px;
+}
+.profile_pic{
+    height: 60px;
+    width: 60px;
+    border: 2px solid white;
+    border-radius: 100%;
+    background-image: url(./images/image-jeremy.png);
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+    justify-content: center;
+}
+.profile_info{
+    line-height: 25px;
+    color: #fff;
+}
+.profile_info h5,.profile_info h3{
+    font-weight: 300;
+}
+.profile_info h3{
+    font-size: 25px;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 25px; 
+}
+.menu a{
+    text-decoration: none;
+    color: var(--Pale_Blue);
+    font-weight: 300;
+}
+
+.cards{
+    display: block;
+}
+
+
+
+.card{
+    margin-top: 25px;
+    padding-top: 45px;
+    width: 100%;
+    height: fit-content;
+    border-radius: 20px 20px 25px 25px; 
+}
+.work{
+    background-color: var(--Light_red_w);
+    background-image: url(./images/icon-work.svg);
+    background-repeat: no-repeat no-repeat;
+    background-position: top right;
+}
+.play{
+    background-color: var(--Soft_blue);
+    background-image: url(./images/icon-play.svg);
+    background-repeat: no-repeat no-repeat;
+    background-position: top right;
+}
+.study{
+    background-color: var(--Light_red);
+    background-image: url(./images/icon-study.svg);
+    background-repeat: no-repeat no-repeat;
+    background-position: top right;
+}
+.exercise{
+    background-color: var(--Lime_green);
+    background-image: url(./images/icon-exercise.svg);
+    background-repeat: no-repeat no-repeat;
+    background-position: top right;
+}
+.social{
+    background-color: var(--Violet);
+    background-image: url(./images/icon-social.svg);
+    background-repeat: no-repeat no-repeat;
+    background-position: top right;
+}
+.self-care{
+    background-color: var(--Soft_orange);
+    background-image: url(./images/icon-self-care.svg);
+    background-repeat: no-repeat no-repeat;
+    background-position: top right;
+}
+.card-info{
+    color: #fff;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 1fr 1fr ; 
+    background-color: var(--Dark_blue);
+    border-radius : 20px;
+} 
+.card-info .col1, .card-info .col2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.col1 h4{
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.card-info .col1 svg{
+    justify-self: end;
+}
+
+.col2 div h3{
+    font-size: 15px;
+    font-weight: 300;
+    padding-left: 22px;
+}
+.col2 div h1{
+    font-size: 30px;
+    font-weight: 300;
+}
+
+@media (min-width :1440px){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        grid-template-rows: repeat(3,auto);
+        gap: 15px;
+    }
+   .container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 15px;
+   }
+   .card{
+    margin-top: 0;
+   }
+   .card-info .col2{
+    display: block;
+   }
+   .card-info .col2 h1{
+    font-size: 50px;
+   }
+   .card-info .col2 h3{
+    padding-left: 0px;
+   }
+   .profile{
+    display: block;
+   }
+   .profile_info{
+    margin-top: 30px;
+    padding-bottom: 70px;
+   }
+   .profile_info h3{
+    font-size: 50px;
+    line-height: 60px;
+   }
+   .profile_info h5{
+    font-size: 20px;
+   }
+   .menu{
+    display: grid;
+    grid-template-rows: repeat(3,auto);
+    gap: 20px;
+   }
+}
+.menu .active{
+    color: #fff;
+}
