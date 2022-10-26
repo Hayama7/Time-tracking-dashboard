@@ -15,7 +15,7 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
  # Desktop View
   ![](./mySolution/desktopView.png)
  # Mobile View
-  ![](./mySolution/mobileView.PNG)
+  ![](./mySolution/mobileView1.PNG)
 
 ## My process
 
